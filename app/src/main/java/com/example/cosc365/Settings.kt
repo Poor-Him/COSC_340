@@ -8,13 +8,13 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class Settings : AppCompatActivity() {
 
-    private val PREFS_NAME = "MyPrefsFile"
+    private val sharePref = "MyPrefsFile"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         // Read saved night mode state from SharedPreferences
-        val sharedPref = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val sharedPref = getSharedPreferences(sharePref, Context.MODE_PRIVATE)
         val isDarkMode = sharedPref.getBoolean("dark_mode", false)
 
         // Apply saved night mode state to app's theme
@@ -41,7 +41,7 @@ class Settings : AppCompatActivity() {
     }
 
     private fun saveNightModeState(isDarkMode: Boolean) {
-        val sharedPref = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) ?: return
+        val sharedPref = getSharedPreferences(sharePref, Context.MODE_PRIVATE) ?: return
         with (sharedPref.edit()) {
             putBoolean("dark_mode", isDarkMode)
             apply()
