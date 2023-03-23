@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
+<!--    Button to go back to the Main Page-->
     <Button
         android:id="@+id/back_to_main_button"
         android:layout_width="wrap_content"
@@ -18,18 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/light_mode_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
-        android:layout_marginTop="380dp"
-        android:onClick="setLightMode"
-        android:text="Light Mode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!--    Button to change it to Dark Mode-->
     <Button
         android:id="@+id/dark_mode_button"
         android:layout_width="wrap_content"
@@ -39,6 +29,19 @@
         android:layout_marginTop="292dp"
         android:onClick="setDarkMode"
         android:text="Dark Mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    Button to change it to Light Mode-->
+    <Button
+        android:id="@+id/light_mode_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="380dp"
+        android:onClick="setLightMode"
+        android:text="Light Mode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
 
+    //Private val that shares preference on if the user want dark or light mode
     private val sharePref = "MyPrefsFile"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
+
+    //function to go to the settings page
     fun openSecondActivity(view: View) {
         val intent = Intent(this, Settings::class.java)
         startActivity(intent)
