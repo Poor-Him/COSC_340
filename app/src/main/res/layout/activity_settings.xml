@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-<!--    Button to go back to the Main Page-->
+    <!--    Button to go back to the Main Page-->
     <Button
         android:id="@+id/back_to_main_button"
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    Button to change it to Light Mode-->
+    <!--    Button to change it to Light Mode-->
     <Button
         android:id="@+id/light_mode_button"
         android:layout_width="wrap_content"
@@ -42,6 +42,19 @@
         android:layout_marginTop="380dp"
         android:onClick="setLightMode"
         android:text="Light Mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Button to sign out-->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="162dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="488dp"
+        android:text="Log out"
+        android:backgroundTint="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
