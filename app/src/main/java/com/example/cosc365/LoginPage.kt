@@ -102,6 +102,9 @@ class LoginPage : AppCompatActivity() {
                     val responseJson = JSONObject(responseText)
                     val accessToken = responseJson.getString("token")
 
+                    val sharedToken = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                    sharedToken.edit().putString("accessToken", accessToken).apply()
+
                     // Login successful, start main activity
                     withContext(Dispatchers.Main) {
                         val intent = Intent(this@LoginPage, MainActivity::class.java)

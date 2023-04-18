@@ -29,8 +29,22 @@ class Settings : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
 
+
+
         // Find the logout button view
         val logoutButton: Button = findViewById(R.id.logoutButton)
+
+
+        // Retrieve the access token from shared preference
+        val sharedToken = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val accessToken = sharedToken.getString("accessToken", null)
+
+        if (accessToken == null) {
+            logoutButton.visibility = View.INVISIBLE
+        } else {
+            logoutButton.visibility = View.VISIBLE
+        }
+
 
         logoutButton.setOnClickListener {
             // Clear the access token from the shared preferences
