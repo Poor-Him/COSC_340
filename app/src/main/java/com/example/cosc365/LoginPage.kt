@@ -2,6 +2,7 @@ package com.example.cosc365
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -27,7 +28,7 @@ class LoginPage : AppCompatActivity() {
     private lateinit var usernameEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
-
+    private lateinit var signupButton: Button
     private var accessToken: String? = null
 
     //Private val that shares preference on if the user want dark or light mode
@@ -46,6 +47,7 @@ class LoginPage : AppCompatActivity() {
         }
 
 
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_page)
 
@@ -53,6 +55,22 @@ class LoginPage : AppCompatActivity() {
         usernameEditText = findViewById(R.id.usernameEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.loginButton)
+        signupButton = findViewById(R.id.signupButton)
+
+        //Goes to signup page
+        signupButton.setOnClickListener {
+            //send to separate sign up page
+            //val intent = Intent(this, SignUpActivity::class.java)
+            //startActivity(intent)
+
+            //work around since signup not working on mobile
+            val link = "https://example.com" // Replace with your specific link
+
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(link)
+            startActivity(intent)
+        }
+
 
         // Set click listener for login button
         loginButton.setOnClickListener {
@@ -102,6 +120,7 @@ class LoginPage : AppCompatActivity() {
                     val responseJson = JSONObject(responseText)
                     val accessToken = responseJson.getString("token")
 
+                    //Share the token wth other pages
                     val sharedToken = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
                     sharedToken.edit().putString("accessToken", accessToken).apply()
 
@@ -129,4 +148,6 @@ class LoginPage : AppCompatActivity() {
         val intent = Intent(this, Settings::class.java)
         startActivity(intent)
     }
+
+
 }
