@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    Text for the front of the flash card-->
+    <!--    Text for the front of the flash card-->
     <TextView
         android:id="@+id/front"
         android:layout_width="0dp"
@@ -15,7 +15,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:text="Text Place Holder"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -24,25 +23,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    Text for the Back of the flashcards-->
+    <!--    Text for the Back of the flashcards-->
+
+    <!--    Button to go to settings-->
+
     <TextView
         android:id="@+id/back"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:text="Text Place Holder For Back"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/front" />
+        app:layout_constraintTop_toBottomOf="@+id/front" />
 
-<!--    Button to go to settings-->
     <Button
         android:id="@+id/open_second_activity_button"
         android:layout_width="wrap_content"
@@ -55,49 +53,86 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    Button the user uses to say that the flashcard was easy-->
+    <!--    Button the user uses to say that the flashcard was easy-->
+
+    <!--    Button the user uses to say that the flashcard was good-->
+
+
+    <!--    Button the user uses to say that the flashcard was hard-->
+
+    <!--    Button the user uses to say that the flashcard was difficult and will show it again-->
+
+    <!-- Button to continue and show flashcard buttons -->
+
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
-        android:text="Easy"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="432dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="151dp"
+        android:text="Continue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/front" />
 
-<!--    Button the user uses to say that the flashcard was good-->
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
-        android:text="Good"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
-
-<!--    Button the user uses to say that the flashcard was hard-->
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
+        android:layout_marginTop="508dp"
+        android:layout_marginBottom="62dp"
+        android:onClick="onEasyButtonClick"
         android:text="Hard"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/front" />
 
-<!--    Button the user uses to say that the flashcard was difficult and will show it again-->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="508dp"
+        android:layout_marginBottom="62dp"
+        android:onClick="onEasyButtonClick"
+        android:text="Good"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/front" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
+        android:layout_marginTop="508dp"
+        android:layout_marginBottom="62dp"
+        android:onClick="onEasyButtonClick"
         android:text="Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="508dp"
+        android:layout_marginBottom="62dp"
+        android:onClick="onEasyButtonClick"
+        android:text="Easy"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/front" />
 
 
