@@ -20,7 +20,7 @@
             android:id="@+id/signUpTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="@string/Sign_Up"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -30,7 +30,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/signUpTextView"
             android:layout_marginTop="16dp"
-            android:hint="Email" />
+            android:hint="@string/Email"
+            android:autofillHints="Email, newEmail"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/usernameEditText"
@@ -38,7 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/emailEditText"
             android:layout_marginTop="16dp"
-            android:hint="Username" />
+            android:hint="@string/Username"
+            android:autofillHints="username, newUsername"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/passwordEditText"
@@ -46,8 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/usernameEditText"
             android:layout_marginTop="16dp"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:hint="@string/Password"
+            android:inputType="textPassword"
+            android:autofillHints="password, newPassword"/>
 
         <Button
             android:id="@+id/signUpButton"
@@ -55,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/passwordEditText"
             android:layout_marginTop="24dp"
-            android:text="Sign Up" />
+            android:text="@string/Sign_Up" />
 
     </RelativeLayout>
 
@@ -66,7 +71,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="322dp"
-        android:text="Back"
+        android:text="@string/Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />

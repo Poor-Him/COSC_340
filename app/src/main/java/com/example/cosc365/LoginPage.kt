@@ -29,7 +29,8 @@ class LoginPage : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var signupButton: Button
-    private var accessToken: String? = null
+    //private var accessToken: String? = null
+
 
     //Private val that shares preference on if the user want dark or light mode
     private val sharePref = "MyPrefsFile"
@@ -56,6 +57,7 @@ class LoginPage : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.loginButton)
         signupButton = findViewById(R.id.signupButton)
+
 
         //Goes to signup page
         signupButton.setOnClickListener {
@@ -143,7 +145,7 @@ class LoginPage : AppCompatActivity() {
         }
     }
 
-    //button to go to settings
+    // Function to go to the settings page
     fun settingsButtonClicked(view: View) {
         val intent = Intent(this, Settings::class.java)
         startActivity(intent)

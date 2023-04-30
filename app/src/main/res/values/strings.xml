@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">COSC 340</string>
+    <string name="Settings">Settings</string>
+    <string name="Continue">Continue</string>
+    <string name="Again">Again</string>
+    <string name="Hard">Hard</string>
+    <string name="Good">Good</string>
+    <string name="Easy">Easy</string>
+    <string name="Login_to_TWEAD">Login to TWEAD</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="Sign_Up">Sign Up</string>
+    <string name="Back">Back</string>
+    <string name="Dark_Mode">Dark Mode</string>
+    <string name="Light_Mode">Light Mode</string>
+    <string name="Log_Out">Log Out</string>
+    <string name="Username">Username</string>
+
+
+
+
 </resources>

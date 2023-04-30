@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
+//import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 
 class Settings : AppCompatActivity() {
@@ -62,21 +62,23 @@ class Settings : AppCompatActivity() {
     }
 
     //function that allows the button to go back to the main page
+    @Suppress("UNUSED_PARAMETER")
     fun goBackToMain(view: View) {
         finish()
     }
 
-    //function to set light mode
+    @Suppress("UNUSED_PARAMETER")
     fun setLightMode(view: View) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         saveNightModeState(false)
     }
 
-    //function to set Dark Mode
+    @Suppress("UNUSED_PARAMETER")
     fun setDarkMode(view: View) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         saveNightModeState(true)
     }
+
 
     //private function that saves the state of the theme
     private fun saveNightModeState(isDarkMode: Boolean) {

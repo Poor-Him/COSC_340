@@ -15,7 +15,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:onClick="goBackToMain"
-        android:text="Back"
+        android:text="@string/Back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
         android:layout_marginLeft="144dp"
         android:layout_marginTop="292dp"
         android:onClick="setDarkMode"
-        android:text="Dark Mode"
+        android:text="@string/Dark_Mode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
         android:layout_marginLeft="144dp"
         android:layout_marginTop="380dp"
         android:onClick="setLightMode"
-        android:text="Light Mode"
+        android:text="@string/Light_Mode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +53,7 @@
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
         android:layout_marginTop="488dp"
-        android:text="Log out"
+        android:text="@string/Log_Out"
         android:backgroundTint="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
