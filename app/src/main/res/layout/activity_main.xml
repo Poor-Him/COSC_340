@@ -25,8 +25,6 @@
 
     <!--    Text for the Back of the flashcards-->
 
-    <!--    Button to go to settings-->
-
     <TextView
         android:id="@+id/back"
         android:layout_width="379dp"
@@ -41,6 +39,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/front" />
 
+    <!--    Button to go to settings-->
+
     <Button
         android:id="@+id/open_second_activity_button"
         android:layout_width="wrap_content"
@@ -48,19 +48,66 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="openSecondActivity"
-        android:text="Settings"
+        android:text="@string/Settings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--    Button the user uses to say that the flashcard was easy-->
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="621dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/Easy"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!--    Button the user uses to say that the flashcard was good-->
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="621dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/Good"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--    Button the user uses to say that the flashcard was hard-->
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="621dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/Hard"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!--    Button the user uses to say that the flashcard was difficult and will show it again-->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="621dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Button to continue and show flashcard buttons -->
 
@@ -70,70 +117,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="544dp"
         android:layout_marginEnd="151dp"
         android:layout_marginRight="151dp"
-        android:text="Continue"
+        android:text="@string/Continue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="onEasyButtonClick"
-        android:text="Hard"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="onEasyButtonClick"
-        android:text="Good"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="onEasyButtonClick"
-        android:text="Again"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="onEasyButtonClick"
-        android:text="Easy"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/front" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
